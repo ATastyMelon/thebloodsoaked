@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhe57dqpb4y0q"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/TestEnemy.gd" id="1_g5a14"]
+[ext_resource type="PackedScene" uid="uid://n3up6wlc3su0" path="res://Models/Drenched.glb" id="2_o3t2q"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nktbx"]
+
+[node name="TestEnemy" type="CharacterBody3D" groups=["Enemy"]]
+script = ExtResource("1_g5a14")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Enemy"]]
+shape = SubResource("CapsuleShape3D_nktbx")
+
+[node name="Drenched" parent="." instance=ExtResource("2_o3t2q")]
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, 0, 0.317977, 0)
